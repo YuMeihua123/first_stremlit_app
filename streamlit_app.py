@@ -15,5 +15,7 @@ st.dataframe(my_fruit_list)
 
 
 ## create a list so that clients can pick what they want
-st.multiselect("Pick some fruits:", list(my_fruit_list.index), ['Apple','Banana'])
-st.dataframe(my_fruit_list)
+fruits_selected = st.multiselect("Pick some fruits:", list(my_fruit_list.index), ['Apple','Banana'])
+fruits_to_show = my_fruit_list.loc['fruits_selected']
+st.dataframe(fruits_to_show)
+
