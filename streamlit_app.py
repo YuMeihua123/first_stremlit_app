@@ -24,7 +24,7 @@ st.header('Fruityvice Fruit Advice!')
 
 import requests
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + "kiwi")
---st.text(fruityvice_response.json()) # not show json format data in screen
+# st.text(fruityvice_response.json()) # not show json format data in screen
 
 # write your own comment -what does the next line do? 
 fruityvice_normalized = pd.json_normalize(fruityvice_response.json())
